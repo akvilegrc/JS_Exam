@@ -28,7 +28,9 @@ class Movie {
 
 let myMovie = new Movie("Finding Nemo", "Andrew Stanton", 94000000);
 let myOtherMovie = new Movie("Avengers: Endgame", "Joe Russo/Anthony Russo",400000000);
+let anotherMovie = new Movie("Avatar", "James Cameron", 237000000);
 
 console.log(myMovie.wasExpensive());
 console.log(myOtherMovie.wasExpensive());
+console.log(anotherMovie.wasExpensive());
 

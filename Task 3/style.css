@@ -40,12 +40,17 @@
   opacity: 0.9;
 }
 
+img {
+  width: 30em;
+}
+
 .output-cointainer {
   width: 100%;
   margin: 25px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .output-cointainer h1 {

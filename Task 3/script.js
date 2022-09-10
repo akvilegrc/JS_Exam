@@ -14,6 +14,9 @@ turėti bent minimalų stilių ir būti responsive;
 const ENDPOINT = "https://api.github.com/users";
 
 const button = document.getElementById("btn");
+const result = document.getElementById("output");
+const message = document.getElementById("message");
+
 button.addEventListener("click", showUsers);
 
 function showUsers() {
@@ -21,8 +24,25 @@ function showUsers() {
   response
     .then((response) => response.json())
     .then((data) => {
-      return data;
-    });
+      console.log(data);
+      data.forEach((user) => {
+        const login = user.login;
+        const avatarUrl = user.avatar_url;
 
+        const userInfo = document.createElement("div");
+
+        const userLogin = document.createElement("p");
+        const userAvatar = document.createElement("img");
+
+        userLogin.textContent = login;
+        userAvatar.src = avatarUrl;
+
+        userInfo.appendChild(userLogin);
+        userInfo.appendChild(userAvatar);
+        result.appendChild(userInfo);
+
+        message.remove();
+      });
+    });
 }
 

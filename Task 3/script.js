@@ -24,7 +24,6 @@ function showUsers() {
   response
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       data.forEach((user) => {
         const login = user.login;
         const avatarUrl = user.avatar_url;

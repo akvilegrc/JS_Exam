@@ -29,8 +29,9 @@ function showUsers() {
         const avatarUrl = user.avatar_url;
 
         const userInfo = document.createElement("div");
+        userInfo.setAttribute("id", "user-card");
 
-        const userLogin = document.createElement("p");
+        const userLogin = document.createElement("h2");
         const userAvatar = document.createElement("img");
 
         userLogin.textContent = login;

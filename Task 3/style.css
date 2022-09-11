@@ -47,6 +47,7 @@ h2 {
 
 img {
   width: 20em;
+  border-radius: 0.5em;
 }
 
 .output-cointainer {
@@ -74,8 +75,10 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 #user-card {
   margin: 2em;
 }
+

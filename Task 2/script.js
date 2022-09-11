@@ -10,3 +10,4 @@ button.addEventListener("click", function () {
   state += 1;
   clickCount.textContent = state;
 });
+

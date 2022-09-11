@@ -19,18 +19,21 @@ response
     .then((data) => {
         data.forEach((car) => {
             const carBrand = car.brand;
-            const carModels = car.models;
-
             const card = document.createElement("div");
             card.setAttribute("id","wrapper-card");
             const brandName = document.createElement("h2");
-            const brandModels = document.createElement("p");
-
-            brandName.textContent = carBrand;
-            brandModels.textContent = carModels;
-
+            const brandModels = document.createElement("ul");
             output.appendChild(card);
             card.appendChild(brandName);
+            
+            brandName.textContent = carBrand;
+            const allModels = car.models;
+            allModels.forEach((model) => {
+                const oneModel = document.createElement("li");
+                oneModel.textContent = model;
+                brandModels.appendChild(oneModel)
+
+            })
             card.appendChild(brandModels);
 
         })
